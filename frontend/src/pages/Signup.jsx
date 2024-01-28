@@ -24,15 +24,11 @@ const Signup = () => {
           password,
           firstName,
           lastName
-        },
-        {
-          headers: {
-            "Content-Type":"application/json",
-          },
         }
       );
 
       localStorage.setItem("token", response.data.token);
+       console.log(response.data.token);
       navigate("/dashboard");
     } catch (error) {
      
